@@ -63,6 +63,12 @@ body {
     .column.side, .column.middle {
         width: 100%;
     }
+
+.carousel{
+    height: 100px;
+    width: 600px;
+}
+
 }
 
 /* Style the footer */
