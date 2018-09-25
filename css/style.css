@@ -64,6 +64,10 @@ body {
         width: 100%;
     }
 
+.carousel{
+    height: 100px;
+    width: 600px;
+}
 
 }
 
@@ -72,8 +76,4 @@ body {
     background-color: #f1f1f1;
     padding: 10px;
     text-align: center;
-}
-
-.carousel-inner {
-    height: 350px;
 }
