@@ -1,6 +1,8 @@
 <?php include "./pages/aufbau/html_header.php" ?>
-<?php include "./pages/aufbau/header.php" ?>
+<?php include "./pages/aufbau/header_home.php" ?>
 <?php include "./pages/aufbau/navbar_home.php" ?>
+
+<?php session_start(); ?>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -40,6 +42,18 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+<?php
+
+if (isset($_SESSION['auth'])) {
+    echo $_SESSION['auth']['id'];
+    echo $_SESSION['auth']['vorname'];
+    echo $_SESSION['auth']['nachname'];
+} else {
+    echo "User ist nicht angemeldet";
+}
+
+?>
 
 <?php include "./pages/aufbau/footer.php" ?>
 <?php include "./pages/aufbau/html_footer.php" ?>
