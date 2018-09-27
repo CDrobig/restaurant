@@ -1,6 +1,7 @@
 <?php include "./pages/aufbau/html_header.php" ?>
-<?php include "./pages/aufbau/header_home.php" ?>
-<?php include "./pages/aufbau/navbar_home.php" ?>
+<?php include "./pages/aufbau/header.php" ?>
+<?php include "./pages/aufbau/navbar.php" ?>
+<link rel="stylesheet" href="http://localhost/css/style.css">
 
 <?php session_start(); ?>
 
@@ -13,21 +14,21 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img class="d-block w-100" src="https://source.unsplash.com/random" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block bg-section">
                 <h5>Bild1</h5>
                 <p>test_unterueberschrift</p>
             </div>
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="https://source.unsplash.com/random" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block bg-section">
                 <h5>Bild2</h5>
                 <p>jnvkjntvlkbnlkznljnejf</p>
             </div>
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="https://source.unsplash.com/random" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block bg-section">
                 <h5>Bild3</h5>
                 <p>ekjvhjtkkltnjkhvhgjhkbgvgh</p>
             </div>

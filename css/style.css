@@ -5,6 +5,7 @@
 body {
     margin: 0;
 }
+
 /* kein Außenabstand*/
 
 h1 {
@@ -15,8 +16,7 @@ h1 {
     margin-left: 0;
     margin-right: 0;
     font-weight: lighter;
-    color: red;
-    font-family: "Times New Roman";
+    color: #0f0f0f;
     text-align: center;
 
 }
@@ -29,23 +29,55 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     font-weight: lighter;
-    color: red;
+    color: #0f0f0f;
     text-align: center;
 }
+
+h3 {
+    display: block;
+    font-size: 1em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: lighter;
+    color: #0f0f0f;
+    text-align: right;
+}
+
+.bg-section {
+    background: rgba(0, 0, 0, .65);
+    padding: 15px;
+    width: 100%;
+    left: 0;
+}
+
+.bg-section h5 {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 300;
+}
+
+.bg-section p {
+    color: rgba(255, 255, 255, .8);
+    font-weight: 100;
+}
+.carousel-indicators {
+    bottom: 20px;
+}
+
 /*Überschriften beim Karussel*/
 h5 {
     color: black;
-    text-align: right;
-    position: relative;
+    text-align: center;
     font-size: 36px;
 }
 
 p {
-    color: pink;
-    text-align: right;
-    position: relative;
+    color: #444444;
+    text-align: center;
     font-size: 24px;
 }
+
 /* Style the header */
 .header {
     background-color: #f1f1f1;
@@ -53,6 +85,15 @@ p {
     text-align: center;
 }
 
+#user_icon {
+    font-size: 36px;
+    color: black;
+}
+
+#warenkorb_icon {
+    font-size: 18px;
+    color: #f2f2f2;
+}
 
 /* Style the top navigation bar */
 .topnav {
@@ -105,10 +146,10 @@ p {
         width: 100%;
     }
 
-.carousel{
-    height: 100px;
-    width: 600px;
-}
+    .carousel {
+        height: 100px;
+        width: 600px;
+    }
 
 }
 
@@ -117,6 +158,5 @@ p {
     background-color: #f1f1f1;
     padding: 10px;
     text-align: center;
-
 
 }

@@ -1,10 +1,10 @@
 <html>
 <head>
-    <title>Kellner Login</title>
+    <title>Service Login</title>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="login-css">
 
-    <link rel="stylesheet" href="././../css/login.css">
+    <link rel="stylesheet" href="http://localhost/restaurant/css/login.css">
 
 
 </head>
@@ -14,9 +14,11 @@
 <form action="login.php" method="POST">
 
     <?php
+
     if (isset($_SESSION['auth'])) {
         unset($_SESSION['auth']);
     }
+
     if (isset($_SESSION['login'])) {
         if ($_SESSION['login'] == false) {
             echo '<div class="alert alert-danger">Falsche Anmeldedaten</div>';
@@ -29,15 +31,15 @@
         <div class="login-form">
             <div class="main-div">
                 <div class="panel">
-                    <h2>Kellner Login</h2>
-                    <p>Bitte geben Sie Ihre Kellner-ID, Passwort und den zu bedienenden Tisch ein</p>
+                    <h2>Service Login</h2>
+                    <p>Bitte geben Sie Ihre Service-ID, Passwort und den zu bedienenden Tisch ein</p>
                 </div>
                 <form id="Login">
 
                     <div class="form-group">
 
 
-                        <input type="text" class="form-control" name="id" placeholder="Kellner-ID">
+                        <input type="text" class="form-control" name="id" placeholder="Service-ID">
 
                     </div>
 
@@ -85,7 +87,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             'id' => $parsed[0]['id'],
             'vorname' => $parsed[0]['vorname'],
             'nachname' => $parsed[0]['nachname']
-
         );
         header('Location: http://localhost/restaurant/');
         return true;
