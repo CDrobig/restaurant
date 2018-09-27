@@ -30,7 +30,7 @@
             <div class="main-div">
                 <div class="panel">
                     <h2>Kellner Login</h2>
-                    <p>Bitte geben Sie Ihre Kellner-ID, Passwort und den zu bedienenden Tisch ein ein</p>
+                    <p>Bitte geben Sie Ihre Kellner-ID, Passwort und den zu bedienenden Tisch ein</p>
                 </div>
                 <form id="Login">
 

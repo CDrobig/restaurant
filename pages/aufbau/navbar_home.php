@@ -14,10 +14,18 @@
                 <a class="nav-link" href="#">Kids</a>
             </li>
         </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="../restaurant/pages/bestellung.php">Bestellung</a>
-            </li>
-        </ul>
+    </div>
+    <div class="container">
+        <hr>
+        <div class="row">
+            <!-- Footer wird in Abschnitte (12tel) aufgeteilt um die Position Festzulegen -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="col-md-6">
+                        <a href="../pages/bestellung.php" target="_blank">
+                            <i <i class="fas fa-cart-plus" id="warenkorb_icon" style="font-size: 36px; color:#f2f2f2"></i>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

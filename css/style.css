@@ -15,8 +15,10 @@ h1 {
     margin-left: 0;
     margin-right: 0;
     font-weight: lighter;
-    color: #0f0f0f;
+    color: red;
+    font-family: "Times New Roman";
     text-align: center;
+
 }
 
 h2 {
@@ -27,11 +29,23 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     font-weight: lighter;
-    color: #cacaca;
+    color: red;
     text-align: center;
 }
+/*Überschriften beim Karussel*/
+h5 {
+    color: black;
+    text-align: right;
+    position: relative;
+    font-size: 36px;
+}
 
-
+p {
+    color: pink;
+    text-align: right;
+    position: relative;
+    font-size: 24px;
+}
 /* Style the header */
 .header {
     background-color: #f1f1f1;
@@ -103,4 +117,6 @@ h2 {
     background-color: #f1f1f1;
     padding: 10px;
     text-align: center;
+
+
 }
