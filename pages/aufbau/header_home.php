@@ -3,7 +3,8 @@
         <ul class="nav navbar-nav mx-auto">
             <li class="nav-item">
                 <a class="nav-link" href="../restaurant/index.php"><h1>The Dish </h1></a>
-                <h2>hbvknbtvkkj ekkjcnrh <br> cjhbcrfhbrhbrghbrgk jhfbvjhr <br> kjnkjngghg gj </h2> </a>
+                <h2>“Part of the secret of success in life <br> is to eat what you love”<br>
+                    - Mark Twain - </h2>
             </li>
         </ul>
         <ul class="nav navbar-nav">
