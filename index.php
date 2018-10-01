@@ -1,9 +1,10 @@
+<?php session_start(); ?>
+
 <?php include "./pages/aufbau/html_header.php" ?>
 <?php include "./pages/aufbau/header.php" ?>
 <?php include "./pages/aufbau/navbar.php" ?>
 <link rel="stylesheet" href="http://localhost/css/style.css">
 
-<?php session_start(); ?>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
