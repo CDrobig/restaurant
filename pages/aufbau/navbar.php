@@ -11,7 +11,7 @@
                 <a class="nav-link" href="http://localhost/restaurant/pages/menu.php">Menu</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Kids</a>
+                <a class="nav-link" href="http://localhost/restaurant/pages/kids.php">Kids</a>
             </li>
         </ul>
     </div>
