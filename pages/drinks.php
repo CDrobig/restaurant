@@ -5,7 +5,6 @@
 
 <ul>
 
-
     <table class="table">
         <thead>
         <tr>
@@ -14,6 +13,8 @@
             <th scope="col"> </th>
             <th scope="col"><h6>liter</h6></th>
             <th scope="col"><h6>€</h6></th>
+            <th scope="col"> </th>
+
         </tr>
         </thead>
         <tbody>
@@ -23,11 +24,20 @@
         $drinks = (new \App\DatabaseController())->showAlkoholfrei();
         foreach ($drinks as $drink): ?>
             <tr>
-                <th scope="row"><h4><?php echo $drink['ID']?></h4></th>
+                <td scope="row"><h4><?php echo $drink['ID']?></h4></td>
                 <td><h4><?php echo $drink['name']?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
                 <td><h4><?php echo $drink['€']?></h4></td>
+                <td>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a button class="btn btn-small addCartBtn" >
+                            <i class="fas fa-plus-circle"  aria-hidden="true" id="plus"></i>
+                        </a>
+                    </li>
+                </ul>
+                </td>
 
             </tr>
         <?php endforeach; ?>

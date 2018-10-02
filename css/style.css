@@ -132,6 +132,11 @@ p {
     color: #f2f2f2;
 }
 
+#plus {
+    font-size: 18px;
+    color: #0f0f0f;
+}
+
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;

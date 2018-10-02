@@ -62,6 +62,50 @@ class DatabaseController
 
     }
 
+    public function showVorspeise ()
+    {
+        $query = "SELECT * FROM menu WHERE kategorie='vorspeise';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
+
+    public function showHauptgang ()
+    {
+        $query = "SELECT * FROM menu WHERE kategorie='hauptgang';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
+
+    public function showDessert ()
+    {
+        $query = "SELECT * FROM menu WHERE kategorie='dessert';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
+
+    public function showSpecial()
+    {
+        $query = "SELECT * FROM menu WHERE kategorie='special';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
+
     public function compare_user_credentials(String $user, String $passwort)
     {
         $query = "SELECT * FROM user WHERE ID='" . $user . "' AND passwort='" . $passwort. "';";
