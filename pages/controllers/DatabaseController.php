@@ -22,6 +22,46 @@ class DatabaseController
         }
     }
 
+    public function showAlkoholfrei()
+    {
+        $query = "SELECT * FROM drinks WHERE kategorie='alkoholfrei';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
+    public function showHeißgetränke ()
+    {
+        $query = "SELECT * FROM drinks WHERE kategorie='heißgetränke';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
+    public function showBier ()
+    {
+        $query = "SELECT * FROM drinks WHERE kategorie='bier';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
+    public function showWein ()
+    {
+        $query = "SELECT * FROM drinks WHERE kategorie='wein';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
     public function compare_user_credentials(String $user, String $passwort)
     {
         $query = "SELECT * FROM user WHERE ID='" . $user . "' AND passwort='" . $passwort. "';";

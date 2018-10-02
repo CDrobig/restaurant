@@ -72,6 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $user = $_POST['id'];
     $passwort = $_POST['passwort'];
+    $tisch = $_POST['tischnummer'];
     $pw_encoded = md5($passwort);
 
     $db = new \App\DatabaseController();
@@ -86,7 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $_SESSION['auth'] = array(
             'id' => $parsed[0]['id'],
             'vorname' => $parsed[0]['vorname'],
-            'nachname' => $parsed[0]['nachname']
+            'nachname' => $parsed[0]['nachname'],
+            'tischnummer' => $tisch
         );
         header('Location: http://localhost/restaurant/');
         return true;
