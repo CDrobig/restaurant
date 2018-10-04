@@ -2,7 +2,7 @@
 <?php include "./aufbau/header.php" ?>
 <?php include "./aufbau/navbar.php" ?>
 <link rel="stylesheet" href="./../css/style.css">
-
+<br>
 <ul>
     <h5 class="table-header">Alkoholfrei</h5>
     <table class="table">
@@ -28,7 +28,7 @@
                 <td><h4><?php echo $drink['name']?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
-                <td><h4><?php echo $drink['preis']?></h4></td>
+                <td><h4><?php echo $drink['price']?></h4></td>
                 <td>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
@@ -68,7 +68,7 @@
                 <td><h4><?php echo $drink['name']?></h4></td>
                 <td><h4><?php echo $drink['ingredients']?></h4></td>
                 <td><h4><?php echo $drink['quantity']?></h4></td>
-                <td><h4><?php echo $drink['preis']?></h4></td>
+                <td><h4><?php echo $drink['price']?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -107,7 +107,7 @@
                 <td><h4><?php echo $drink['name']?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
-                <td><h4><?php echo $drink['preis']?></h4></td>
+                <td><h4><?php echo $drink['price']?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -146,7 +146,7 @@
                 <td><h4><?php echo $drink['name']?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
-                <td><h4><?php echo $drink['preis']?></h4></td>
+                <td><h4><?php echo $drink['price']?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">

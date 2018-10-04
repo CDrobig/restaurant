@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-dark bg-dark navbar-expand" id="header">
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -45,18 +47,18 @@
                <table class="table table-hover" id="einkaufstabelle">
                    <thead>
                    <tr>
-                       <th>#</th>
+                       <th>Id</th>
                        <th>Name</th>
                        <th></th>
                    </tr>
                    </thead>
                    <tbody>
-                   
+
                    </tbody>
                </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Bestellung aufgeben</button>
+                <button type="button" class="btn btn-primary" id="order">Bestellung absenden</button>
             </div>
         </div>
     </div>

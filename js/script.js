@@ -1,4 +1,5 @@
-$(document).ready(function () {
+
+    $(document).ready(function () {
     $('.addCartBtn').on('click', function () {
         var btn = $(this);
         var tr = btn.parents('tr');
