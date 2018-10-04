@@ -13,7 +13,7 @@ class DatabaseController
 
     public function conn()
     {
-        $this->_link = new \mysqli("localhost:3306", "root", "root", "restaurant");
+        $this->_link = new \mysqli("localhost:3306", "root", "", "restaurant");
 
         /* check connection */
         if ($this->_link->connect_errno) {
