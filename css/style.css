@@ -10,27 +10,29 @@ body {
 
 h1 {
     display: block;
-    font-size: 2em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
+    font-size: 60px;
+    margin-top: 0.2em;
+    margin-bottom: 0.05em;
     margin-left: 0;
     margin-right: 0;
     font-weight: lighter;
-    color: #0f0f0f;
+    color: black;
     text-align: center;
+    font-family: "Javanese Text";
 
 }
 
 h2 {
     display: block;
     font-size: 1em;
-    margin-top: 0.67em;
+    margin-top: 0.2em;
     margin-bottom: 0.67em;
     margin-left: 0;
     margin-right: 0;
     font-weight: lighter;
-    color: #0f0f0f;
+    color: gray(lightness);
     text-align: center;
+    font-family: "Javanese Text";
 }
 
 h3 {
@@ -61,6 +63,7 @@ h5 {
     color: black;
     text-align: center;
     font-size: 36px;
+    font-family: "Javanese Text";
 }
 
 h6 {
@@ -99,6 +102,12 @@ h8 {
     text-align: left;
 }
 
+h9 {
+    font-family: "calibri light";
+    font-size: 24px;
+    text-align: center;
+}
+
 .bg-section {
     background: rgba(0, 0, 0, .65);
     padding: 15px;
@@ -117,7 +126,7 @@ h8 {
 }
 
 .carousel-indicators {
-    bottom: 20px;
+    bottom: 5px;
 }
 
 .table-header {
@@ -129,6 +138,13 @@ p {
     color: #444444;
     text-align: center;
     font-size: 24px;
+    font-family: "Javanese Text";
+}
+
+p1  {
+    color: white;
+    font-size: 16px;
+    font-family: "calibri light";
 }
 
 /* Style the header */
@@ -139,7 +155,7 @@ p {
 }
 
 #user_icon {
-    font-size: 36px;
+    font-size: 24px;
     color: black;
 }
 
@@ -258,7 +274,7 @@ p {
 }
 
 .addCartBtn:hover i {
-    color: deeppink !important;
+    color: dimgrey !important;
 }
 
 footer {
@@ -267,11 +283,11 @@ footer {
 footer a{
     color: black;
     display: block;
-    font-size: 24px;
-    font-family: "Agency FB";
+    font-size: 16px;
+    font-family: "calibri light";
 }
 footer a i {
-    font-size: 36px;
+    font-size: 24px;
     color: black;
 }
 footer a:hover {
@@ -295,7 +311,7 @@ footer #instagram-link:hover i{
     bottom: 10px;
     max-width: 375px;
     width: auto;
-    background: rgba(255, 20, 147, .8);
+    background: #444444;
     color: white;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
