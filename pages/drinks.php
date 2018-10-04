@@ -4,11 +4,11 @@
 <link rel="stylesheet" href="./../css/style.css">
 
 <ul>
-
+    <h5 class="table-header">Alkoholfrei</h5>
     <table class="table">
         <thead>
         <tr>
-            <th scope="col"><h5>Alkoholfrei</h5></th>
+            <th scope="col"></th>
             <th scope="col"> </th>
             <th scope="col"> </th>
             <th scope="col"><h6>liter</h6></th>
@@ -45,15 +45,16 @@
         </tbody>
     </table>
 
-
+    <h5 class="table-header">Heißgetränke</h5>
     <table class="table">
         <thead>
         <tr>
-            <th scope="col"><h5>Heißgetränke</h5></th>
+            <th scope="col"></th>
             <th scope="col"> </th>
             <th scope="col"> </th>
             <th scope="col"><h6>liter</h6></th>
             <th scope="col"><h6>€</h6></th>
+            <th scope="col"> </th>
         </tr>
         </thead>
         <tbody>
@@ -63,26 +64,36 @@
         $drinks = (new \App\DatabaseController())->showHeißgetränke();
         foreach ($drinks as $drink): ?>
             <tr>
-                <th scope="row"><h4><?php echo $drink['ID']?></h4></th>
+                <td scope="row"><h4><?php echo $drink['ID']?></h4></td>
                 <td><h4><?php echo $drink['name']?></h4></td>
                 <td><h4><?php echo $drink['ingredients']?></h4></td>
                 <td><h4><?php echo $drink['quantity']?></h4></td>
                 <td><h4><?php echo $drink['€']?></h4></td>
+                <td>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a button class="btn btn-small addCartBtn" >
+                                <i class="fas fa-plus-circle"  aria-hidden="true" id="plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
             </tr>
         <?php endforeach; ?>
 
         </tbody>
     </table>
 
-
+    <h5 class="table-header">Bier</h5>
     <table class="table">
         <thead>
         <tr>
-            <th scope="col"><h5>Bier</h5></th>
+            <th scope="col"></th>
             <th scope="col"> </th>
             <th scope="col"> </th>
             <th scope="col"><h6>liter</h6></th>
             <th scope="col"><h6>€</h6></th>
+            <th scope="col"> </th>
         </tr>
         </thead>
         <tbody>
@@ -92,26 +103,36 @@
         $drinks = (new \App\DatabaseController())->showBier();
         foreach ($drinks as $drink): ?>
             <tr>
-                <th scope="row"><h4><?php echo $drink['ID']?></h4></th>
+                <td scope="row"><h4><?php echo $drink['ID']?></h4></td>
                 <td><h4><?php echo $drink['name']?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
                 <td><h4><?php echo $drink['€']?></h4></td>
+                <td>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a button class="btn btn-small addCartBtn" >
+                                <i class="fas fa-plus-circle"  aria-hidden="true" id="plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
             </tr>
         <?php endforeach; ?>
 
         </tbody>
     </table>
 
-
+    <h5 class="table-header">Wein</h5>
     <table class="table">
         <thead>
         <tr>
-            <th scope="col"><h5>Wein</h5></th>
+            <th scope="col"></th>
             <th scope="col"> </th>
             <th scope="col"> </th>
             <th scope="col"><h6>liter</h6></th>
             <th scope="col"><h6>€</h6></th>
+            <th scope="col"> </th>
         </tr>
         </thead>
         <tbody>
@@ -121,11 +142,20 @@
         $drinks = (new \App\DatabaseController())->showWein();
         foreach ($drinks as $drink): ?>
             <tr>
-                <th scope="row"><h4><?php echo $drink['ID']?></h4></th>
+                <td scope="row"><h4><?php echo $drink['ID']?></h4></td>
                 <td><h4><?php echo $drink['name']?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
                 <td><h4><?php echo $drink['€']?></h4></td>
+                <td>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a button class="btn btn-small addCartBtn" >
+                                <i class="fas fa-plus-circle"  aria-hidden="true" id="plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
             </tr>
         <?php endforeach; ?>
 

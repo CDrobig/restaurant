@@ -22,7 +22,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <div class="col-md-6">
-                        <a href="#" data-toggle="modal" data-target="#exampleModal">
+                        <a href="#" data-toggle="modal" data-target="#einkaufswagenModal">
                             <i class="fas fa-shopping-cart" id="warenkorb_icon"></i>
                         </a>
                     </div>
@@ -32,7 +32,7 @@
     </div>
 </nav>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="einkaufswagenModal" tabindex="-1" role="dialog" aria-labelledby="einkaufswagenModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -42,7 +42,18 @@
                 </button>
             </div>
             <div class="modal-body">
-               ....
+               <table class="table table-hover" id="einkaufstabelle">
+                   <thead>
+                   <tr>
+                       <th>#</th>
+                       <th>Name</th>
+                       <th></th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   
+                   </tbody>
+               </table>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Bestellung aufgeben</button>
