@@ -2,8 +2,10 @@
 <?php include "./aufbau/header.php" ?>
 <?php include "./aufbau/navbar.php" ?>
 <link rel="stylesheet" href="./../css/style.css">
+
 <br>
-<ul>
+
+<div class="container" data-tabelle="menu">
 
     <h5 class="table-header">Vorspeise</h5>
     <table class="table">
@@ -26,13 +28,13 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['price'] ?></h4></td>
+                <td><h4><?php echo $dish['preis'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
-                            <a button class="btn btn-small addCartBtn">
+                            <button class="btn btn-small addCartBtn">
                                 <i class="fas fa-plus-circle" aria-hidden="true" id="plus"></i>
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </td>
@@ -65,13 +67,13 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['price'] ?></h4></td>
+                <td><h4><?php echo $dish['preis'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
-                            <a button class="btn btn-small addCartBtn">
+                            <button class="btn btn-small addCartBtn">
                                 <i class="fas fa-plus-circle" aria-hidden="true" id="plus"></i>
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </td>
@@ -103,13 +105,13 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['price'] ?></h4></td>
+                <td><h4><?php echo $dish['preis'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
-                            <a button class="btn btn-small addCartBtn">
+                            <button class="btn btn-small addCartBtn">
                                 <i class="fas fa-plus-circle" aria-hidden="true" id="plus"></i>
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </td>
@@ -141,7 +143,7 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['price'] ?></h4></td>
+                <td><h4><?php echo $dish['preis'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -156,7 +158,7 @@
 
         </tbody>
     </table>
-</ul>
+</div>
 
 <?php include "./aufbau/footer.php" ?>
 <?php include "./aufbau/html_footer.php" ?>

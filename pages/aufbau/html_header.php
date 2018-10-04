@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!-- Öffnet HTML-Dokument-->
 <!doctype html>
 <html lang="en">

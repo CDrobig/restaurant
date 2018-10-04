@@ -3,7 +3,11 @@
 <?php include "./aufbau/navbar.php" ?>
 <link rel="stylesheet" href="./../css/style.css">
 
+<br>
 
+<div class="container" data-tabelle="kids">
+
+</div>
 
 
 <?php include "./aufbau/footer.php" ?>

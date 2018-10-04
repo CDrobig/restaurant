@@ -3,7 +3,7 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand" id="header">
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="http://localhost/restaurant/index.php">Home</a>
             </li>
             <li class="nav-item">
@@ -58,7 +58,7 @@
                </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="order">Bestellung absenden</button>
+                <button type="button" class="btn btn-primary" id="orderBtn">Bestellung absenden</button>
             </div>
         </div>
     </div>

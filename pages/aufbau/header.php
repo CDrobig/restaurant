@@ -12,18 +12,13 @@
          </li>
      </ul> -->
 
-    <?php
-
-    if (!isset($_SESSION['auth'])) {
-        echo
-        '<ul class="nav navbar-nav">
+    <?php if (!isset($_SESSION['auth'])): ?>
+        <ul class="nav navbar-nav">
             <li class="nav-item">
                 <a href="http://localhost/restaurant/pages/login.php">
                     <i class="fas fa-user" aria-hidden="true" id="user_icon"></i>
                 </a>
             </li>
-        </ul>';
-    }
-
-    ?>
+        </ul>
+    <?php endif; ?>
 </nav>

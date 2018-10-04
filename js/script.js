@@ -1,18 +1,19 @@
-
-    $(document).ready(function () {
+$(document).ready(function () {
     $('.addCartBtn').on('click', function () {
         var btn = $(this);
         var tr = btn.parents('tr');
         var id = tr.children('td:first').find('h4').html();
         var name = tr.children('td:nth-child(2)').find('h4').html();
+        var tabellenname = tr.parents('.container').data('tabelle');
 
         var cart = localStorage.getItem('cart');
-        console.log(cart);
+
         if (cart !== null) {
             cart = JSON.parse(cart);
             var obj = {
                 name: name,
-                id: id
+                id: id,
+                tabelle: tabellenname
             };
             cart.push(obj);
             localStorage.setItem('cart', JSON.stringify(cart));
@@ -20,13 +21,57 @@
             var a = [];
             var obj = {
                 name: name,
-                id: id
+                id: id,
+                tabelle: tabellenname
             };
             a.push(obj);
             localStorage.setItem('cart', JSON.stringify(a));
         }
 
-        console.log(localStorage.getItem('cart'));
+        var meldung = '' +
+            '<div class="Meldung">' +
+            '    <p>Ihr Gericht wurde in den Warenkorb gelegt!</p>' +
+            '</div>';
+
+        var container = $(document).find('.Meldung-container');
+        container.empty();
+        container.append(meldung);
+        setTimeout(function () {
+            container.empty();
+        }, 3000);
+    });
+
+    /*
+    Bestellung abschicken
+     */
+    $(document).on('click', '#orderBtn', function () {
+        // Daten aus localstorage auslesen
+        var warenkorb = JSON.parse(localStorage.getItem('cart'));
+        for (var i = 0; i < warenkorb.length; i++) { // daten durchloopen
+            /*
+             * NICHT FERTIG
+             */
+            console.log('AJAX STARTEN FÜR:');
+            console.log('ID: ' + warenkorb[i].id + ' NAME: ' + warenkorb[i].name + ' TABELLE: ' + warenkorb[i].tabelle);
+            // ajax auf serverseite feritg machen!!!!!
+            $.ajax({
+                type: 'post',
+                dataType: 'json',
+                url: 'http://localhost/restaurant/pages/controllers/bestellen.php',
+                data: {
+                    'tabelle': warenkorb[i].tabelle,
+                    'gericht_id': warenkorb[i].id
+                },
+                success: function (antwort) {
+                    console.log(antwort);
+                },
+                error: function (antwort) {
+                    console.log(antwort)
+                }
+            });
+        }
+        // LOCALSTORAGE leeren
+        // bestätigung anzeigen -> siehe IN WARENKOB SETZEN
     });
 
 
@@ -77,20 +122,6 @@
     });
 
     /*
-    $.ajax({
-        type: 'post',
-        dataType: 'json',
-        url: 'http://localhost/restaurant/pages/controllers/get_gericht.php',
-        data: {
-            'typ': 'getränk',
-            'gericht_id': gericht_id
-        },
-        success: function (antwort) {
-            console.log(antwort);
-        },
-        error: function (antwort) {
-            console.log(antwort)
-        }
-    });
+
     */
 });

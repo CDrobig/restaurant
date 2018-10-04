@@ -32,7 +32,7 @@ class DatabaseController
 
     }
 
-    public function showHeißgetränke ()
+    public function showHeißgetränke()
     {
         $query = "SELECT * FROM drinks WHERE kategorie='heißgetränke';";
         $result = $this->_link->query($query);
@@ -42,7 +42,7 @@ class DatabaseController
 
     }
 
-    public function showBier ()
+    public function showBier()
     {
         $query = "SELECT * FROM drinks WHERE kategorie='bier';";
         $result = $this->_link->query($query);
@@ -52,7 +52,7 @@ class DatabaseController
 
     }
 
-    public function showWein ()
+    public function showWein()
     {
         $query = "SELECT * FROM drinks WHERE kategorie='wein';";
         $result = $this->_link->query($query);
@@ -62,7 +62,7 @@ class DatabaseController
 
     }
 
-    public function showVorspeise ()
+    public function showVorspeise()
     {
         $query = "SELECT * FROM menu WHERE kategorie='vorspeise';";
         $result = $this->_link->query($query);
@@ -73,7 +73,7 @@ class DatabaseController
     }
 
 
-    public function showHauptgang ()
+    public function showHauptgang()
     {
         $query = "SELECT * FROM menu WHERE kategorie='hauptgang';";
         $result = $this->_link->query($query);
@@ -84,7 +84,7 @@ class DatabaseController
     }
 
 
-    public function showDessert ()
+    public function showDessert()
     {
         $query = "SELECT * FROM menu WHERE kategorie='dessert';";
         $result = $this->_link->query($query);
@@ -108,7 +108,7 @@ class DatabaseController
 
     public function compare_user_credentials(String $user, String $passwort)
     {
-        $query = "SELECT * FROM user WHERE ID='" . $user . "' AND passwort='" . $passwort. "';";
+        $query = "SELECT * FROM user WHERE ID='" . $user . "' AND passwort='" . $passwort . "';";
         $result = $this->_link->query($query);
 
         $parsed = $this->get_as_array($result);
@@ -118,6 +118,13 @@ class DatabaseController
         } else {
             return $parsed;
         }
+    }
+
+    public function bestell_position_einfuegen($tisch, $tabelle, $id)
+    {
+        $query = "INSERT INTO ...."; // zuerst bestellung neu anlegen
+        // checken ob bestllung bereits angelegt
+        // bestllung_position dann einfügen mit gericht (id, tabelle)
     }
 
     private function get_as_array($data)
