@@ -49,9 +49,18 @@ if (isset($_SESSION['auth'])) {
     echo $_SESSION['auth']['vorname'];
     echo $_SESSION['auth']['nachname'];
 } else {
-    echo "User ist nicht angemeldet";
+    echo "Bitte melden Sie sich mit Ihrer Service-ID an!";
 }
 ?>
+
+    <div class="jumbotron" id="howTo">
+        <h4 class="display-4">Dinner kann so einfach sein!</h4>
+        <h6 class="lead">Stellen Sie sich ihr persönliches Dinner zusammen, indem Speisen und Getränke in Ihren persönlichen Warenkorb legen und auf "Bestellen" drücken. <br>
+            Natürlich können Sie jederzeit weitere Artikel ordern und bar, via PayPal oder mit Ihrer Karte bezahlen. <hr class="my-4" ></h6>
+        <h6 Sie benötigen Unterstützung? Bitte betätigen sie den SOS-Button auf dem Tich oder klicken Sie </h6>
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="help_Button">Hier!</a>
+    </div>
+
 
 <?php include "./pages/aufbau/footer.php" ?>
 <?php include "./pages/aufbau/html_footer.php" ?>
