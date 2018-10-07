@@ -71,7 +71,15 @@ class DatabaseController
         return $parsed;
 
     }
+    public function showKids()
+    {
+        $query = "SELECT * FROM kids WHERE kategorie='kindergericht';";
+        $result = $this->_link->query($query);
 
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
 
     public function showHauptgang()
     {
