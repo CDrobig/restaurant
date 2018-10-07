@@ -1,3 +1,4 @@
+
 <?php include "./aufbau/html_header.php" ?>
 <?php include "./aufbau/header.php" ?>
 <?php include "./aufbau/navbar.php" ?>
@@ -28,7 +29,7 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['preis'] ?></h4></td>
+                <td><h4><?php echo $dish['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -67,7 +68,7 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['preis'] ?></h4></td>
+                <td><h4><?php echo $dish['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -105,7 +106,7 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['preis'] ?></h4></td>
+                <td><h4><?php echo $dish['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -143,7 +144,7 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['preis'] ?></h4></td>
+                <td><h4><?php echo $dish['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -162,4 +163,3 @@
 
 <?php include "./aufbau/footer.php" ?>
 <?php include "./aufbau/html_footer.php" ?>
-

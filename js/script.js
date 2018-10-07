@@ -29,8 +29,9 @@ $(document).ready(function () {
         }
 
         var meldung = '' +
-            '<div class="Meldung">' +
-            '    <p>Ihr Gericht wurde in den Warenkorb gelegt!</p>' +
+            '<div class="Meldung">'+
+            <p> name  +
+            ' wurde dem Warenkorb hinzugefügt!</p>' +
             '</div>';
 
         var container = $(document).find('.Meldung-container');
