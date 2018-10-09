@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./../css/style.css">
 <nav class="navbar navbar-expand-md navbar-fixed-top navbar-light bg-light main-nav" id="header">
     <ul class="nav navbar-nav mx-auto">
         <li class="nav-item">

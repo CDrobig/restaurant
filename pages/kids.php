@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="./../css/style.css">
 
 <br>
-
 <div class="container" data-tabelle="kids">
     <!DOCTYPE html>
     <html lang="en">
@@ -156,25 +155,18 @@
     </head>
 
     <body>
-    <h1>Mein Lieblingsessen</h1>
+    <h10>Zeichne dein Lieblingsessen</h10>
 
     <div id="canvasDiv">
         <!-- It's bad practice (to me) to put your CSS here.  I'd recommend the use of a CSS file! -->
         <canvas id="canvasSignature" width="500px" height="300px" style="border:2px solid #000000;"></canvas>
     </div>
     <a href="http://localhost/restaurant/pages/kids.php" id="delete">
-        <i class="fas fa-eraser" id="delete_icon"></i></a> Nochmal
+        <i class="fas fa-eraser" id="delete_icon"></i></a>
     </body>
     </html>
-</div>
-<br>
-<br>
-<br>
 
-
-<div class="container" data-tabelle="drinks">
-
-    <h5 class="table-header">Für unsere kleinen Gäste</h5>
+    <h9 class="table-header"> <br> Für unsere kleinen Gäste </br></h9>
     <table class="table">
         <thead>
         <tr>
@@ -183,20 +175,20 @@
             <th scope="col"></th>
             <th scope="col"><h6>€</h6></th>
             <th scope="col"></th>
-
         </tr>
         </thead>
         <tbody>
 
         <?php
         require_once "./controllers/DatabaseController.php";
-        $drinks = (new \App\DatabaseController())->showKids();
-        foreach ($drinks as $drink): ?>
+        $kids = (new \App\DatabaseController())->showKindergericht();
+        foreach ($kids as $kids): ?>
+
             <tr>
-                <td scope="row"><h4><?php echo $drink['ID'] ?></h4></td>
-                <td><h4><?php echo $drink['name'] ?></h4></td>
-                <td><h4><?php echo $drink['ingredients'] ?></h4></td>
-                <td><h4><?php echo $drink['price'] ?></h4></td>
+                <td scope="row"><h4><?php echo $kids['ID'] ?></h4></td>
+                <td><h4><?php echo $kids['name'] ?></h4></td>
+                <td><h4><?php echo $kids['ingredients'] ?></h4></td>
+                <td><h4><?php echo $kids['preis'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -206,14 +198,17 @@
                         </li>
                     </ul>
                 </td>
-
             </tr>
         <?php endforeach; ?>
 
         </tbody>
+
     </table>
 
 </div>
+<br>
+<br>
+<br>
 
 <?php include "./aufbau/footer.php" ?>
 <?php include "./aufbau/html_footer.php" ?>

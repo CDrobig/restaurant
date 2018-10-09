@@ -3,13 +3,17 @@
 session_start();
 
 require_once 'DatabaseController.php';
-
+// Daten von ajax
 $tabelle = $_POST['tabelle'];
-$id = $_POST['gericht_id'];
-
+$gericht_id = $_POST['gericht_id'];
+// Daten aus Sassion aus Anmeldung
 $tisch = $_SESSION['auth']['tischnummer'];
 
 $db = new \App\DatabaseController();
-// insert into betsllung -> tabelle & id
+// insert into bestellung -> tabelle & id
 
-$db->bestell_position_einfuegen($tisch, $tabelle, $id);
+$bestell_id = $db->bestell_position_einfuegen($tisch, $tabelle, $gericht_id);
+
+header('Content-type: application/json');
+http_response_code(200);
+echo json_encode(array('id' => $bestell_id));
