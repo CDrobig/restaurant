@@ -16,21 +16,17 @@
         <?php
         require_once "./controllers/DatabaseController.php";
         $orders = (new \App\DatabaseController())->show_bestellungen();
-        foreach ($orders as $order): ?>
+        foreach ($orders as $key => $value): ?>
+        <tr>
+            <td colspan="3">Bestellnummer <?php echo $key?></td>
+        </tr>
+            <?php foreach ($value as $positon): ?>
             <tr>
-                <td scope="row"><h4><?php echo $order['ID'] ?></h4></td>
-                <td><h4><?php echo $order['name'] ?></h4></td>
-                <td><h4><?php echo $order['price'] ?></h4></td>
-                <td>
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item">
-                            <button class="btn btn-small addCartBtn">
-                                <i class="fas fa-plus-circle" aria-hidden="true" id="plus"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </td>
+                <td scope="row"><h4><?php echo $positon['ID'] ?></h4></td>
+                <td><h4><?php echo $positon['Name'] ?></h4></td>
+                <td><h4><?php echo $positon['Preis'] ?></h4></td>
             </tr>
+            <?php endforeach; ?>
         <?php endforeach; ?>
     </tbody>
     </table>
