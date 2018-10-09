@@ -66,11 +66,11 @@ if (isset($_SESSION['auth'])) {
         <h4 class="display-4">Dinner kann so einfach sein!</h4>
         <h6 class="lead">Stellen Sie sich ihr persönliches Dinner zusammen, indem Speisen und Getränke in Ihren
             persönlichen Warenkorb legen und auf "Bestellen" drücken. <br>
+            <br>
             Natürlich können Sie jederzeit weitere Artikel ordern und bar, via PayPal oder mit Ihrer Karte bezahlen.
-            <hr class="my-4">
-        </h6>
-        <h6 Sie benötigen Unterstützung? Bitte betätigen sie den SOS-Button auf dem Tich oder klicken Sie </h6>
-        <a class="btn btn-primary btn-lg" href="#" role="button" id="help_Button">Hier!</a>
+            <br>
+            <br>
+            Sie benötigen Unterstützung? Bitte betätigen sie den Service-Button auf dem Tich oder klicken Sie </h6>
     </div>
 
 
