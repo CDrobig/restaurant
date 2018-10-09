@@ -70,7 +70,7 @@ if (isset($_SESSION['auth'])) {
             Natürlich können Sie jederzeit weitere Artikel ordern und bar, via PayPal oder mit Ihrer Karte bezahlen.
             <br>
             <br>
-            Sie benötigen Unterstützung? Bitte betätigen sie den Service-Button auf dem Tich oder klicken Sie </h6>
+            Sie benötigen Unterstützung? Bitte betätigen sie den Service-Button auf dem Tisch oder klicken Sie </h6>
     </div>
 
 
