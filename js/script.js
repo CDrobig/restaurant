@@ -33,7 +33,6 @@ $(document).ready(function () {
             '    <p1>Ihr Gericht wurde in den Warenkorb gelegt!</p1>' +
 
             '</div>';
-
         var container = $(document).find('.Meldung-container');
         container.empty();
         container.append(meldung);
@@ -72,6 +71,19 @@ $(document).ready(function () {
                 });
             }
         }
+    });
+
+    $('#euro_icon').on('click', function () {
+        var meldung = '' +
+            '<div class="Meldung">' +
+            '    <p1>Bitte bestätigen Sie den Service-Button auf dem Tisch!</p1>' +
+            '</div>';
+        var container = $(document).find('.Meldung-container');
+        container.empty();
+        container.append(meldung);
+        setTimeout(function () {
+            container.empty();
+        }, 3000);
     });
 
     function wartenBisFertig(zaehler, max) {
