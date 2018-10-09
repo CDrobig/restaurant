@@ -108,6 +108,13 @@ h9 {
     text-align: center;
 }
 
+h10{
+    color: orangered;
+    font-family: "Comic Sans MS";
+    text-align: center;
+    font-size: 30px;
+
+}
 .bg-section {
     background: rgba(0, 0, 0, .65);
     padding: 15px;
@@ -341,3 +348,5 @@ footer #instagram-link:hover i{
     top: 50px;
     left: 50px;
 }
+
+

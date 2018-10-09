@@ -8,7 +8,7 @@
 
 <div class="container" data-tabelle="menu">
 
-    <h5 class="table-header">Vorspeise</h5>
+    <h9 class="table-header">Vorspeise</h9>
     <table class="table">
         <thead>
         <tr>
@@ -29,7 +29,7 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['price'] ?></h4></td>
+                <td><h4><?php echo $dish['preis'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -47,7 +47,7 @@
     </table>
 
 
-    <h5 class="table-header">Hauptgang</h5>
+    <h9 class="table-header">Hauptgang</h9>
     <table class="table">
         <thead>
         <tr>
@@ -68,7 +68,7 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['price'] ?></h4></td>
+                <td><h4><?php echo $dish['preis'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -85,7 +85,7 @@
     </table>
 
 
-    <h5 class="table-header">Dessert</h5>
+    <h9 class="table-header">Dessert</h9>
     <table class="table">
         <thead>
         <tr>
@@ -106,7 +106,7 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['price'] ?></h4></td>
+                <td><h4><?php echo $dish['preis'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -123,7 +123,7 @@
     </table>
 
 
-    <h5 class="table-header">Special</h5>
+    <h9 class="table-header">Beilagen</h9>
     <table class="table">
         <thead>
         <tr>
@@ -144,7 +144,7 @@
                 <td scope="row"><h4><?php echo $dish['ID'] ?></h4></td>
                 <td><h4><?php echo $dish['name'] ?></h4></td>
                 <td><h4><?php echo $dish['ingredients'] ?></h4></td>
-                <td><h4><?php echo $dish['price'] ?></h4></td>
+                <td><h4><?php echo $dish['preis'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">

@@ -13,7 +13,7 @@ class DatabaseController
 
     public function conn()
     {
-        $this->_link = new \mysqli("localhost", "thedish", "Ced55344", "restaurant");
+        $this->_link = new \mysqli("localhost", "root", "", "restaurant");
 
         /* check connection */
         if ($this->_link->connect_errno) {
@@ -32,7 +32,7 @@ class DatabaseController
 
     }
 
-    public function showHeißgetränke()
+    public function showHeißgetraenke()
     {
         $query = "SELECT * FROM drinks WHERE kategorie='heißgetränke';";
         $result = $this->_link->query($query);
@@ -65,15 +65,6 @@ class DatabaseController
     public function showVorspeise()
     {
         $query = "SELECT * FROM menu WHERE kategorie='vorspeise';";
-        $result = $this->_link->query($query);
-
-        $parsed = $this->get_as_array($result);
-        return $parsed;
-
-    }
-    public function showKids()
-    {
-        $query = "SELECT * FROM kids WHERE kategorie='kindergericht';";
         $result = $this->_link->query($query);
 
         $parsed = $this->get_as_array($result);
@@ -113,6 +104,15 @@ class DatabaseController
 
     }
 
+    public function showKindergericht()
+    {
+        $query = "SELECT * FROM kids WHERE kategorie='kindergericht';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
 
     public function compare_user_credentials(String $user, String $passwort)
     {
@@ -128,11 +128,25 @@ class DatabaseController
         }
     }
 
-    public function bestell_position_einfuegen($tisch, $tabelle, $id)
+    public function bestell_position_einfuegen($tisch, $tabelle, $gericht_id)
     {
-        $query = "INSERT INTO ...."; // zuerst bestellung neu anlegen
-        // checken ob bestllung bereits angelegt
-        // bestllung_position dann einfügen mit gericht (id, tabelle)
+        $query = "INSERT INTO `bestellung`(`tischnummer`, `gericht_id`, `tabelle`) VALUES ($tisch, '$gericht_id', '$tabelle');"; // zuerst bestellung neu anlegen
+        $result = $this->_link->query($query);
+        $bestellung = mysqli_insert_id($this->_link);
+        return $bestellung;
+    }
+
+    public function show_bestellungen() {
+        // SELECT b.ID as "ID", CONCAT(d.name,'', m.name) as "Name", CONCAT(d.preis,'', m.preis) as "Preis" FROM bestellung b LEFT JOIN drinks d on b.gericht_id = d.ID LEFT JOIN menu m ON b.gericht_id = m.ID
+        $tischnummern = "SELECT tischnummer FROM bestellung GROUP BY tischnummer";
+        $drinks = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', d.name as 'Name', d.preis as 'Preis' FROM bestellung b INNER JOIN drinks d on b.gericht_id = d.ID ORDER BY b.tischnummer, b.ID;";
+        $menu = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', m.name as 'Name', m.preis as 'Preis' FROM bestellung b INNER JOIN menu m on b.gericht_id = m.ID ORDER BY b.tischnummer, b.ID";
+        $kids = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', k.name as 'Name', k.preis as 'Preis' FROM bestellung b INNER JOIN kids k on b.gericht_id = k.ID ORDER BY b.tischnummer, b.ID";
+        $result = array();
+        foreach ($tischnummern as $nummer) {
+            // tischnummer als key
+            // foreach drinks, menu, kids -> weiter in key / tischnummer
+        }
     }
 
     private function get_as_array($data)

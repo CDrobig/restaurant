@@ -12,24 +12,24 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="https://source.unsplash.com/random" alt="First slide">
+                <img class="d-block w-100" img src="burger.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block bg-section">
-                    <h5>Bild1</h5>
-                    <p>test_unterueberschrift</p>
+                    <h5>Schwarze Bohnen Burger - 11,20 €</h5>
+                    <p>mit Rotkohlsalat, Cashewcreme und leckeren Ofenkartoffeln</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://source.unsplash.com/random" alt="Second slide">
+                <img class="d-block w-100" img src="spaghetti.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block bg-section">
-                    <h5>Bild2</h5>
-                    <p>jnvkjntvlkbnlkznljnejf</p>
+                    <h5>Spaghetti Bolognese - 9,90 €</h5>
+                    <p>mit Rinderhackfleisch, frischen Tomaten, Basilikum und italienischem Parmesan</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://source.unsplash.com/random" alt="Third slide">
+                <img class="d-block w-100" img src="cake.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block bg-section">
-                    <h5>Bild3</h5>
-                    <p>ekjvhjtkkltnjkhvhgjhkbgvgh</p>
+                    <h5>Schokoladen-Kirsch-Kuchen - 3,40 €</h5>
+                    <p>mit frischen Kirschen und geschmolzener Schokolade</p>
                 </div>
             </div>
         </div>
