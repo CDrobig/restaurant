@@ -76,7 +76,7 @@ $(document).ready(function () {
     $('#euro_icon').on('click', function () {
         var meldung = '' +
             '<div class="Meldung">' +
-            '    <p1>Bitte bestätigen Sie den Service-Button auf dem Tisch!</p1>' +
+            '    <p1>Bitte drücken Sie den Service-Button auf dem Tisch!</p1>' +
             '</div>';
         var container = $(document).find('.Meldung-container');
         container.empty();

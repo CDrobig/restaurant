@@ -156,6 +156,42 @@ class DatabaseController
         return $bestellung;
     }
 
+    public function showRechnung()
+    {
+        session_start();
+
+        $tisch = $_SESSION['auth']['tischnummer'];
+
+        $result = array();
+
+        $drinks = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', d.name as 'Name', d.price as 'Preis' FROM bestellung b INNER JOIN drinks d on b.gericht_id = d.ID WHERE tischnummer = $tisch ORDER BY b.tischnummer, b.ID;";
+        $menu = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', m.name as 'Name', m.price as 'Preis' FROM bestellung b INNER JOIN menu m on b.gericht_id = m.ID WHERE tischnummer = $tisch ORDER BY b.tischnummer, b.ID";
+        $kids = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', k.name as 'Name', k.price as 'Preis' FROM bestellung b INNER JOIN kids k on b.gericht_id = k.ID WHERE tischnummer = $tisch ORDER BY b.tischnummer, b.ID";
+        $getraenke = $this->_link->query($drinks);
+        $getraenke = $this->get_as_array($getraenke);
+        foreach ($getraenke as $element) {
+            if (isset($element)) {
+                array_push($result, $element);
+            }
+        }
+        $speisen = $this->_link->query($menu);
+        $speisen = $this->get_as_array($speisen);
+        foreach ($speisen as $element) {
+            if (isset($element)) {
+                array_push($result, $element);
+            }
+        }
+        $kinder = $this->_link->query($kids);
+        $kinder = $this->get_as_array($kinder);
+        foreach ($kinder as $element) {
+            if (isset($element)) {
+                array_push($result, $element);
+            }
+        }
+
+        return $result;
+    }
+
     public function show_bestellungen()
     {
         // SELECT b.ID as "ID", CONCAT(d.name,'', m.name) as "Name", CONCAT(d.price,'', m.price) as "Preis" FROM bestellung b LEFT JOIN drinks d on b.gericht_id = d.ID LEFT JOIN menu m ON b.gericht_id = m.ID

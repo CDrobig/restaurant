@@ -18,7 +18,7 @@
         $orders = (new \App\DatabaseController())->show_bestellungen();
         foreach ($orders as $key => $value): ?>
         <tr>
-            <td colspan="3">Bestellnummer <?php echo $key?></td>
+            <td colspan="3">Tisch <?php echo $key?></td>
         </tr>
             <?php foreach ($value as $positon): ?>
             <tr>

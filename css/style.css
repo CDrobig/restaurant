@@ -245,7 +245,7 @@ p1  {
 }
 
 .carousel-item img {
-    height: 400px;
+    height: 800px;
     width: 100%;
 }
 
@@ -309,7 +309,7 @@ footer {
 footer a{
     color: black;
     display: block;
-    font-size: 16px;
+    font-size: 12px;
     font-family: "calibri light";
 }
 footer a i {
@@ -330,6 +330,15 @@ footer #twitter-link:hover i{
 footer #instagram-link:hover i{
     color: #e1306c;
 }
+
+footer #pp-link:hover i {
+    color: #009cde;
+}
+
+footer #card-link:hover i {
+    color: red;
+}
+
 
 .Meldung {
     position: fixed;
@@ -363,4 +372,13 @@ footer #instagram-link:hover i{
     left: 50px;
 }
 
+#euro_icon:hover {
+    cursor: pointer;
+}
+
+footer a span{
+    font-family: "calibri light";
+    font-size: 16px;
+    padding-left: 8px;
+}
 
