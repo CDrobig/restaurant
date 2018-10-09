@@ -185,6 +185,15 @@ p1  {
     color: #0f0f0f;
 }
 
+.plusSpecial {
+    font-size: 18px;
+    color: black !important;
+    background: #ffffff !important;
+}
+.plusSpecial i.fas {
+    color: black !important;
+}
+
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
@@ -233,6 +242,11 @@ p1  {
 .table thead tr th:first-child {
     min-width: 75px;
     width: 10%;
+}
+
+.carousel-item img {
+    height: 400px;
+    width: 100%;
 }
 
 /*.table tbody tr td:first-child {

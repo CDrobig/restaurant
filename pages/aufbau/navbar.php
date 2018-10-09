@@ -47,7 +47,7 @@
                <table class="table table-hover" id="einkaufstabelle">
                    <thead>
                    <tr>
-                       <th>Id</th>
+                       <th>ID</th>
                        <th>Name</th>
                        <th></th>
                    </tr>

@@ -7,7 +7,7 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Preis</th>
         </tr>
@@ -20,7 +20,7 @@
             <tr>
                 <td scope="row"><h4><?php echo $order['ID'] ?></h4></td>
                 <td><h4><?php echo $order['name'] ?></h4></td>
-                <td><h4><?php echo $order['preis'] ?></h4></td>
+                <td><h4><?php echo $order['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">

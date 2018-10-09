@@ -30,7 +30,7 @@
                 <td><h4><?php echo $drink['name'] ?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
-                <td><h4><?php echo $drink['preis'] ?></h4></td>
+                <td><h4><?php echo $drink['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -46,7 +46,8 @@
 
         </tbody>
     </table>
-
+    <br>
+    <br>
     <h9 class="table-header">Heißgetränke</h9>
     <table class="table">
         <thead>
@@ -70,7 +71,7 @@
                 <td><h4><?php echo $drink['name'] ?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
-                <td><h4><?php echo $drink['preis'] ?></h4></td>
+                <td><h4><?php echo $drink['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -86,7 +87,8 @@
 
         </tbody>
     </table>
-
+    <br>
+    <br>
     <h9 class="table-header">Bier</h9>
     <table class="table">
         <thead>
@@ -110,7 +112,7 @@
                 <td><h4><?php echo $drink['name'] ?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
-                <td><h4><?php echo $drink['preis'] ?></h4></td>
+                <td><h4><?php echo $drink['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -125,7 +127,8 @@
 
         </tbody>
     </table>
-
+    <br>
+    <br>
     <h9 class="table-header">Wein</h9>
     <table class="table">
         <thead>
@@ -149,7 +152,7 @@
                 <td><h4><?php echo $drink['name'] ?></h4></td>
                 <td><h4><?php echo $drink['ingredients'] ?></h4></td>
                 <td><h4><?php echo $drink['quantity'] ?></h4></td>
-                <td><h4><?php echo $drink['preis'] ?></h4></td>
+                <td><h4><?php echo $drink['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">

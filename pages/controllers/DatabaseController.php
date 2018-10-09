@@ -13,7 +13,7 @@ class DatabaseController
 
     public function conn()
     {
-        $this->_link = new \mysqli("localhost", "root", "", "restaurant");
+        $this->_link = new \mysqli("localhost", "thedish", "Ced55344", "restaurant");
 
         /* check connection */
         if ($this->_link->connect_errno) {
@@ -92,11 +92,29 @@ class DatabaseController
         return $parsed;
 
     }
+    public function showBeilagen()
+    {
+        $query = "SELECT * FROM menu WHERE kategorie='beilagen';";
+        $result = $this->_link->query($query);
 
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
 
     public function showSpecial()
     {
         $query = "SELECT * FROM menu WHERE kategorie='special';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
+    public function showSpecial1()
+    {
+        $query = "SELECT * FROM menu WHERE ID='501';";
         $result = $this->_link->query($query);
 
         $parsed = $this->get_as_array($result);
@@ -137,11 +155,11 @@ class DatabaseController
     }
 
     public function show_bestellungen() {
-        // SELECT b.ID as "ID", CONCAT(d.name,'', m.name) as "Name", CONCAT(d.preis,'', m.preis) as "Preis" FROM bestellung b LEFT JOIN drinks d on b.gericht_id = d.ID LEFT JOIN menu m ON b.gericht_id = m.ID
+        // SELECT b.ID as "ID", CONCAT(d.name,'', m.name) as "Name", CONCAT(d.price,'', m.price) as "Preis" FROM bestellung b LEFT JOIN drinks d on b.gericht_id = d.ID LEFT JOIN menu m ON b.gericht_id = m.ID
         $tischnummern = "SELECT tischnummer FROM bestellung GROUP BY tischnummer";
-        $drinks = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', d.name as 'Name', d.preis as 'Preis' FROM bestellung b INNER JOIN drinks d on b.gericht_id = d.ID ORDER BY b.tischnummer, b.ID;";
-        $menu = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', m.name as 'Name', m.preis as 'Preis' FROM bestellung b INNER JOIN menu m on b.gericht_id = m.ID ORDER BY b.tischnummer, b.ID";
-        $kids = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', k.name as 'Name', k.preis as 'Preis' FROM bestellung b INNER JOIN kids k on b.gericht_id = k.ID ORDER BY b.tischnummer, b.ID";
+        $drinks = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', d.name as 'Name', d.price as 'Preis' FROM bestellung b INNER JOIN drinks d on b.gericht_id = d.ID ORDER BY b.tischnummer, b.ID;";
+        $menu = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', m.name as 'Name', m.price as 'Preis' FROM bestellung b INNER JOIN menu m on b.gericht_id = m.ID ORDER BY b.tischnummer, b.ID";
+        $kids = "SELECT b.ID as 'ID', b.tischnummer as 'Tischnummer', k.name as 'Name', k.price as 'Preis' FROM bestellung b INNER JOIN kids k on b.gericht_id = k.ID ORDER BY b.tischnummer, b.ID";
         $result = array();
         foreach ($tischnummern as $nummer) {
             // tischnummer als key

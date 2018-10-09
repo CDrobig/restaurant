@@ -14,8 +14,11 @@
             <div class="carousel-item active">
                 <img class="d-block w-100" img src="burger.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block bg-section">
-                    <h5>Schwarze Bohnen Burger - 11,20 €</h5>
-                    <p>mit Rotkohlsalat, Cashewcreme und leckeren Ofenkartoffeln</p>
+                    <h5>Schwarze Bohnen Burger - 6,90 €</h5>
+                    <p>mit Rotkohlsalat und Cashew-Creme</p>
+                    <a class="btn btn-small plusSpecial" href="http://localhost/restaurant/pages/menu.php#special">
+                        <i class="fas fa-plus-circle"  aria-hidden="true"></i> Bestell mich!
+                    </a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -23,6 +26,9 @@
                 <div class="carousel-caption d-none d-md-block bg-section">
                     <h5>Spaghetti Bolognese - 9,90 €</h5>
                     <p>mit Rinderhackfleisch, frischen Tomaten, Basilikum und italienischem Parmesan</p>
+                    <a class="btn btn-small plusSpecial" href="http://localhost/restaurant/pages/menu.php#special">
+                        <i class="fas fa-plus-circle" aria-hidden="true"></i> Bestell mich!
+                    </a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -30,6 +36,9 @@
                 <div class="carousel-caption d-none d-md-block bg-section">
                     <h5>Schokoladen-Kirsch-Kuchen - 3,40 €</h5>
                     <p>mit frischen Kirschen und geschmolzener Schokolade</p>
+                    <a class="btn btn-small plusSpecial" href="http://localhost/restaurant/pages/menu.php#special">
+                        <i class="fas fa-plus-circle" aria-hidden="true"></i> Bestell mich!
+                    </a>
                 </div>
             </div>
         </div>
@@ -55,8 +64,11 @@ if (isset($_SESSION['auth'])) {
 
     <div class="jumbotron" id="howTo">
         <h4 class="display-4">Dinner kann so einfach sein!</h4>
-        <h6 class="lead">Stellen Sie sich ihr persönliches Dinner zusammen, indem Speisen und Getränke in Ihren persönlichen Warenkorb legen und auf "Bestellen" drücken. <br>
-            Natürlich können Sie jederzeit weitere Artikel ordern und bar, via PayPal oder mit Ihrer Karte bezahlen. <hr class="my-4" ></h6>
+        <h6 class="lead">Stellen Sie sich ihr persönliches Dinner zusammen, indem Speisen und Getränke in Ihren
+            persönlichen Warenkorb legen und auf "Bestellen" drücken. <br>
+            Natürlich können Sie jederzeit weitere Artikel ordern und bar, via PayPal oder mit Ihrer Karte bezahlen.
+            <hr class="my-4">
+        </h6>
         <h6 Sie benötigen Unterstützung? Bitte betätigen sie den SOS-Button auf dem Tich oder klicken Sie </h6>
         <a class="btn btn-primary btn-lg" href="#" role="button" id="help_Button">Hier!</a>
     </div>

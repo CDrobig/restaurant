@@ -165,7 +165,8 @@
         <i class="fas fa-eraser" id="delete_icon"></i></a>
     </body>
     </html>
-
+    <br>
+    <br>
     <h9 class="table-header"> <br> Für unsere kleinen Gäste </br></h9>
     <table class="table">
         <thead>
@@ -188,7 +189,7 @@
                 <td scope="row"><h4><?php echo $kids['ID'] ?></h4></td>
                 <td><h4><?php echo $kids['name'] ?></h4></td>
                 <td><h4><?php echo $kids['ingredients'] ?></h4></td>
-                <td><h4><?php echo $kids['preis'] ?></h4></td>
+                <td><h4><?php echo $kids['price'] ?></h4></td>
                 <td>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
