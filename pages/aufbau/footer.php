@@ -5,7 +5,6 @@
         <div class="row">
             <!-- Footer wird in Abschnitte (12tel) aufgeteilt um die Position Festzulegen -->
             <div class="col-md-4">
-                Weitere Informationen:
                 <a href="http://www.facebook.com" target="_blank" id="facebook-link">
                     <i class="fab fa-facebook-square" id="fb_icon"></i> <span>facebook</span>
                     <!-- Icon wird erstellt und benötigt eine ID um die Formatierung via CSS zu verändern-->
@@ -18,10 +17,15 @@
                 </a>
             </div>
 
-            <div class="col-md-4 text-right">
-                <a href="http://localhost/restaurant/pages/impressum.php">Impressum</a>
-                <a href="http://localhost/restaurant/pages/pay.php">Bezahlen </a>
+            <div class="col-md-4 text-center">
+                <a href="http://localhost/restaurant/pages/impressum.php"  >Impressum</a>
+                <!-- <a href="http://localhost/restaurant/pages/pay.php">Bezahlen </a> -->
             </div>
+
+            <div class="col-md-4 text-right">
+            <button type="button" class="btn btn-outline-dark" href="http://localhost/restaurant/pages/pay.php"> Bezahlen</button>
+            <!-- <a href="http://localhost/restaurant/pages/pay.php">Bezahlen </a> -->
+        </div>
         </div>
     </div>
 </footer>
