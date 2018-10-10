@@ -178,7 +178,7 @@ p1  {
     color: #f2f2f2;
 }
 
-#pp_icon {
+#pp_link {
     font-size: 18px;
     color: black;
 }
@@ -363,12 +363,34 @@ footer #instagram-link:hover i{
     color: #e1306c;
 }
 
-footer #pp-link:hover i {
+#pp-link:hover i {
     color: #009cde;
+    font-size: 30px;
 }
 
-footer #card-link:hover i {
-    color: red;
+#visa-link:hover i {
+    color: darkblue;
+    font-size: 30px;
+}
+
+#mc-link:hover i {
+    color: orange;
+    font-size: 30px;
+}
+
+#amex-link:hover i {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+
+#card-link:hover i {
+    color: dodgerblue;
+    font-size: 30px;
+}
+
+#euro_icon: hover i {
+    color: silver;
+    font-size: 30px;
 }
 
 
@@ -413,4 +435,5 @@ footer a span{
     font-size: 16px;
     padding-left: 8px;
 }
+
 
