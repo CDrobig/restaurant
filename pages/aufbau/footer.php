@@ -20,6 +20,7 @@
 
             <div class="col-md-4 text-right">
                 <a href="http://localhost/restaurant/pages/impressum.php">Impressum</a>
+                <a href="http://localhost/restaurant/pages/pay.php">Bezahlen </a>
             </div>
         </div>
     </div>
