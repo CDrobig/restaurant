@@ -115,6 +115,11 @@ h10{
     font-size: 30px;
 
 }
+h11 {
+    display: flex;
+    font-family: "calibri light";
+    font-size: 24px;
+}
 
 
 .bg-section {

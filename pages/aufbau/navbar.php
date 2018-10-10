@@ -15,6 +15,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="http://localhost/restaurant/pages/kids.php">Kids</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost/restaurant/pages/feedback.php">Feedback</a>
+            </li>
         </ul>
     </div>
     <div class="container">

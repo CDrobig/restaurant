@@ -158,7 +158,6 @@ class DatabaseController
 
     public function showRechnung()
     {
-        session_start();
 
         $tisch = $_SESSION['auth']['tischnummer'];
 

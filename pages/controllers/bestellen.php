@@ -6,7 +6,7 @@ require_once 'DatabaseController.php';
 // Daten von ajax
 $tabelle = $_POST['tabelle'];
 $gericht_id = $_POST['gericht_id'];
-// Daten aus Sassion aus Anmeldung
+// Daten aus Session aus Anmeldung
 $tisch = $_SESSION['auth']['tischnummer'];
 
 $db = new \App\DatabaseController();
