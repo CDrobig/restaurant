@@ -17,20 +17,7 @@
                     <i class="fab fa-instagram" id="insta_icon"></i> <span>instagram</span>
                 </a>
             </div>
-            <div class="col-md-4">
-                So können Sie bezahlen:
-                <a href="https://www.paypal.com/de/signin" target="_blank" id="pp-link">
-                    <i class="fab fa-cc-paypal" id="pp_icon"></i> <span>paypal</span>
-                    <!-- Icon wird erstellt und benötigt eine ID um die Formatierung via CSS zu verändern-->
-                </a>
-                <a href="https://sumup.de" target="_blank" id="card-link">
-                    <i class="fas fa-money-check" id="card_icon"></i> <span>kreditkarte</span>
 
-                </a>
-                <a href="#">
-                    <i class="fas fa-euro-sign" id="euro_icon"></i> <span>bar</span>
-                </a>
-            </div>
             <div class="col-md-4 text-right">
                 <a href="http://localhost/restaurant/pages/impressum.php">Impressum</a>
             </div>

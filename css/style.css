@@ -67,7 +67,7 @@ h5 {
 }
 
 h6 {
-    display: block;
+    display: inline;
     font-size: 0.9em;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
@@ -115,6 +115,8 @@ h10{
     font-size: 30px;
 
 }
+
+
 .bg-section {
     background: rgba(0, 0, 0, .65);
     padding: 15px;
@@ -174,6 +176,36 @@ p1  {
 #warenkorb_icon {
     font-size: 18px;
     color: #f2f2f2;
+}
+
+#pp_icon {
+    font-size: 18px;
+    color: black;
+}
+
+#visa_icon {
+    font-size: 18px;
+    color: black;
+}
+
+#mc_icon {
+    font-size: 18px;
+    color: black;
+}
+
+#amex_icon {
+     font-size: 18px;
+     color: black;
+ }
+
+#card_icon {
+    font-size: 18px;
+    color: black;
+}
+
+#euro_icon {
+    font-size: 18px;
+    color: black;
 }
 
 #order {
