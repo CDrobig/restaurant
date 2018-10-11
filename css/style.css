@@ -231,6 +231,37 @@ p1  {
     color: black !important;
 }
 
+#pp-link:hover i {
+    color: #009cde;
+    font-size: 30px;
+}
+
+#visa-link:hover i {
+    color: darkblue;
+    font-size: 30px;
+}
+
+#mc-link:hover i {
+    color: orange;
+    font-size: 30px;
+}
+
+#amex-link:hover i {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+
+#card-link:hover i {
+    color: dodgerblue;
+    font-size: 30px;
+}
+
+#euro_icon:hover i {
+    color: silver;
+    font-size: 30px;
+}
+
+
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
@@ -366,36 +397,6 @@ footer #twitter-link:hover i{
 }
 footer #instagram-link:hover i{
     color: #e1306c;
-}
-
-#pp-link:hover i {
-    color: #009cde;
-    font-size: 30px;
-}
-
-#visa-link:hover i {
-    color: darkblue;
-    font-size: 30px;
-}
-
-#mc-link:hover i {
-    color: orange;
-    font-size: 30px;
-}
-
-#amex-link:hover i {
-    color: cornflowerblue;
-    font-size: 30px;
-}
-
-#card-link:hover i {
-    color: dodgerblue;
-    font-size: 30px;
-}
-
-#euro_icon: hover i {
-    color: silver;
-    font-size: 30px;
 }
 
 

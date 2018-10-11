@@ -148,6 +148,16 @@ class DatabaseController
         }
     }
 
+    public function showUser(String $user, String $passwort)
+    {
+        $query = "SELECT * FROM user WHERE ID='" . $user . "' AND passwort='" . $passwort . "';";
+        $result = $this->_link->query($query);
+
+        $parsed = $this->get_as_array($result);
+        return $parsed;
+
+    }
+
     public function bestell_position_einfuegen($tisch, $tabelle, $gericht_id)
     {
         $query = "INSERT INTO `bestellung`(`tischnummer`, `gericht_id`, `tabelle`) VALUES ($tisch, '$gericht_id', '$tabelle');"; // zuerst bestellung neu anlegen

@@ -50,6 +50,8 @@
 
         </tbody>
         Tischnummer: <?php echo $bills['Tischnummer'] ?>
+
+
     </table>
 
 <br>
