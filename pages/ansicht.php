@@ -1,9 +1,9 @@
 <?php include "./aufbau/html_header.php" ?>
 <?php include "./aufbau/header.php" ?>
-<?php include "./aufbau/navbar.php" ?>
 
 <div class="container mt-4">
     <h9>Bestellungen</h9>
+    <br>
     <table class="table">
         <thead>
         <tr>
@@ -31,7 +31,8 @@
     </tbody>
     </table>
 
+<br>
+<div class="fb"  >
+<a href="http://localhost/restaurant/pages/feedback.php">  <h7>Feedback anzeigen</h7></a>
 </div>
-
-<?php include "./aufbau/footer.php" ?>
-<?php include "./aufbau/html_footer.php" ?>
+<br>

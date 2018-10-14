@@ -155,7 +155,8 @@
     </head>
 
     <body>
-    <h10>Zeichne dein Lieblingsessen</h10>
+
+    <h5>Zeichne dein Lieblingsessen</h5>
 
     <div id="canvasDiv">
         <!-- It's bad practice (to me) to put your CSS here.  I'd recommend the use of a CSS file! -->
@@ -207,9 +208,9 @@
     </table>
 
 </div>
+
 <br>
 <br>
 <br>
 
-<?php include "./aufbau/footer.php" ?>
-<?php include "./aufbau/html_footer.php" ?>
+<?php include "./aufbau/kids_footer.php" ?>

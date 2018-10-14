@@ -52,7 +52,6 @@ $(document).ready(function () {
             var zaehler = 0;
             var max = warenkorb.length;
             for (var i = 0; i < max; i++) { // daten durchloopen
-                // ajax auf serverseite feritg machen!!!!!
                 $.ajax({
                     type: 'post',
                     dataType: 'json',
