@@ -120,6 +120,17 @@ h11 {
     font-family: "calibri light";
     font-size: 24px;
 }
+h12 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: lighter;
+    color: #0f0f0f;
+    text-align: right;
+}
 
 
 .bg-section {

@@ -19,9 +19,9 @@
             </div>
 
             <div class="col-md-4 text-right">
-                <a href="http://localhost/restaurant/pages/impressum.php">Impressum</a>
-                <a href="http://localhost/restaurant/pages/pay.php">Bezahlen </a>
-                <a href="http://localhost:8080/feedback/comment.html">Feedback </a>
+                <a href="http://localhost/restaurant/pages/impressum.php"<span><h12>Impressum</h12></span></a>
+                <a href="http://localhost/restaurant/pages/pay.php"<span><h12>Bezahlen</h12></span></a>
+                <a href="http://localhost:8080/feedback/comment.html"<span><h12>Feedback</h12></span></a>
             </div>
         </div>
     </div>
