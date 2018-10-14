@@ -12,7 +12,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" img src="burger.jpg" alt="First slide">
+                <img class="d-block w-100" src="burger.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block bg-section">
                     <h5>Schwarze Bohnen Burger - 6,90 €</h5>
                     <p>mit Rotkohlsalat und Cashew-Creme</p>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" img src="spaghetti.jpg" alt="Second slide">
+                <img class="d-block w-100" src="spaghetti.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block bg-section">
                     <h5>Spaghetti Bolognese - 9,90 €</h5>
                     <p>mit Rinderhackfleisch, frischen Tomaten, Basilikum und italienischem Parmesan</p>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" img src="cake.jpg" alt="Third slide">
+                <img class="d-block w-100" src="cake.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block bg-section">
                     <h5>Schokoladen-Kirsch-Kuchen - 3,40 €</h5>
                     <p>mit frischen Kirschen und geschmolzener Schokolade</p>
@@ -53,6 +53,7 @@
     </div>
 
 <?php
+//session prüfen und infrmationen über login anzeigen
 if (isset($_SESSION['auth'])) {
     echo $_SESSION['auth']['id'];
     echo $_SESSION['auth']['vorname'];
@@ -61,6 +62,7 @@ if (isset($_SESSION['auth'])) {
     echo "Bitte melden Sie sich mit Ihrer Service-ID an!";
 }
 ?>
+<!-- textfeld (hervorgehoben) -->
 
     <div class="jumbotron" id="howTo">
         <h4 class="display-4">Dinner kann so einfach sein!</h4>

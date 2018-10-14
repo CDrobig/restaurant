@@ -7,11 +7,6 @@
                 - Mark Twain - </h2>
         </li>
     </ul>
-    <!-- <ul class="nav navbar-nav">
-         <li class="nav-item">
-             <a class="nav-link" href="../restaurant/pages/login.php" >Kellner</a>
-         </li>
-     </ul> -->
 
     <?php if (!isset($_SESSION['auth'])): ?>
         <ul class="nav navbar-nav">

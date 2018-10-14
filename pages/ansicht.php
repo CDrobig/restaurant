@@ -13,6 +13,7 @@
         </tr>
         </thead>
         <tbody>
+        <!-- zugriff auf DatabaseController um bestellungen abzurufen -->
         <?php
         require_once "./controllers/DatabaseController.php";
         $orders = (new \App\DatabaseController())->show_bestellungen();
@@ -22,6 +23,7 @@
         </tr>
             <?php foreach ($value as $positon): ?>
             <tr>
+                <!-- in tabelle zurückschreiben-->
                 <td scope="row"><h4><?php echo $positon['ID'] ?></h4></td>
                 <td><h4><?php echo $positon['Name'] ?></h4></td>
                 <td><h4><?php echo $positon['Preis'] ?></h4></td>

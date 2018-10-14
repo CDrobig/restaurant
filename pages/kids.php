@@ -19,7 +19,12 @@
             });
 
 
-            // works out the X, Y position of the click inside the canvas from the X, Y position on the page
+            /**
+             * x und y position festlegen
+             * @param mouseEvent
+             * @param sigCanvas
+             * @returns {{X: number, Y: number}}
+             */
             function getPosition(mouseEvent, sigCanvas) {
                 var x, y;
                 if (mouseEvent.pageX != undefined && mouseEvent.pageY != undefined) {
@@ -34,16 +39,19 @@
             }
 
             function initialize() {
-                // get references to the canvas element as well as the 2D drawing context
+                /**
+                 * canvas refenrenzieren
+                 * @type {HTMLElement}
+                 */
                 var sigCanvas = document.getElementById("canvasSignature");
                 var context = sigCanvas.getContext("2d");
                 context.strokeStyle = 'Black';
 
-                // This will be defined on a TOUCH device such as iPad or Android, etc.
+                // definition und optimierung für touchscreen
                 var is_touch_device = 'ontouchstart' in document.documentElement;
 
                 if (is_touch_device) {
-                    // create a drawer which tracks touch movements
+                    // bildschirmberührungen überwachen und verfolgen
                     var drawer = {
                         isDrawing: false,
                         touchstart: function (coors) {
@@ -65,55 +73,55 @@
                         }
                     };
 
-                    // create a function to pass touch events and coordinates to drawer
+                    /**
+                     * bildschirmberührungen als event speichern
+                     * @param event
+                     */
                     function draw(event) {
 
-                        // get the touch coordinates.  Using the first touch in case of multi-touch
+                        /**
+                         * koordinaten abrufen
+                         * @type {{x: number, y: number}}
+                         */
                         var coors = {
                             x: event.targetTouches[0].pageX,
                             y: event.targetTouches[0].pageY
                         };
 
-                        // Now we need to get the offset of the canvas location
                         var obj = sigCanvas;
 
                         if (obj.offsetParent) {
-                            // Every time we find a new object, we add its offsetLeft and offsetTop to curleft and curtop.
+
                             do {
                                 coors.x -= obj.offsetLeft;
                                 coors.y -= obj.offsetTop;
                             }
-                                // The while loop can be "while (obj = obj.offsetParent)" only, which does return null
-                                // when null is passed back, but that creates a warning in some editors (i.e. VS2010).
+
                             while ((obj = obj.offsetParent) != null);
                         }
 
-                        // pass the coordinates to the appropriate handler
+                        // koordinaten übergeben
                         drawer[event.type](coors);
                     }
 
-
-                    // attach the touchstart, touchmove, touchend event listeners.
                     sigCanvas.addEventListener('touchstart', draw, false);
                     sigCanvas.addEventListener('touchmove', draw, false);
                     sigCanvas.addEventListener('touchend', draw, false);
 
-                    // prevent elastic scrolling
                     sigCanvas.addEventListener('touchmove', function (event) {
                         event.preventDefault();
                     }, false);
                 }
                 else {
 
-                    // start drawing when the mousedown event fires, and attach handlers to
-                    // draw a line to wherever the mouse moves to
+                    // mausbewegung in zeichungselement umwandeln
                     $("#canvasSignature").mousedown(function (mouseEvent) {
                         var position = getPosition(mouseEvent, sigCanvas);
 
                         context.moveTo(position.X, position.Y);
                         context.beginPath();
 
-                        // attach event handlers
+                        /* eventhandler implementieren */
                         $(this).mousemove(function (mouseEvent) {
                             drawLine(mouseEvent, sigCanvas, context);
                         }).mouseup(function (mouseEvent) {
@@ -126,8 +134,12 @@
                 }
             }
 
-            // draws a line to the x and y coordinates of the mouse event inside
-            // the specified element using the specified context
+            /**
+             * linie zeichnen
+             * @param mouseEvent
+             * @param sigCanvas
+             * @param context
+             */
             function drawLine(mouseEvent, sigCanvas, context) {
 
                 var position = getPosition(mouseEvent, sigCanvas);
@@ -136,16 +148,19 @@
                 context.stroke();
             }
 
-            // draws a line from the last coordiantes in the path to the finishing
-            // coordinates and unbind any event handlers which need to be preceded
-            // by the mouse down event
+            /**
+             * koordinieren der events
+             * @param mouseEvent
+             * @param sigCanvas
+             * @param context
+             */
             function finishDrawing(mouseEvent, sigCanvas, context) {
-                // draw the line to the finishing coordinates
+
                 drawLine(mouseEvent, sigCanvas, context);
 
                 context.closePath();
 
-                // unbind any events which could draw
+                /* zeichen-vorgang beenden*/
                 $(sigCanvas).unbind("mousemove")
                     .unbind("mouseup")
                     .unbind("mouseout");
@@ -159,9 +174,10 @@
     <h5>Zeichne dein Lieblingsessen</h5>
 
     <div id="canvasDiv">
-        <!-- It's bad practice (to me) to put your CSS here.  I'd recommend the use of a CSS file! -->
+        <!-- größe des canvas festlegen -->
         <canvas id="canvasSignature" width="500px" height="300px" style="border:2px solid #000000;"></canvas>
     </div>
+    <!-- "radiergummi" implementieren -->
     <a href="http://localhost/restaurant/pages/kids.php" id="delete">
         <i class="fas fa-eraser" id="delete_icon"></i></a>
     </body>
@@ -182,6 +198,8 @@
         <tbody>
 
         <?php
+        // ausgabe der kindergerichte
+
         require_once "./controllers/DatabaseController.php";
         $kids = (new \App\DatabaseController())->showKindergericht();
         foreach ($kids as $kids): ?>
@@ -212,5 +230,5 @@
 <br>
 <br>
 <br>
-
+<!-- svg-datei (im kids_footer) einbinden -->
 <?php include "./aufbau/kids_footer.php" ?>

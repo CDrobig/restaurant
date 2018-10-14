@@ -15,18 +15,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="http://localhost/restaurant/pages/kids.php">Kids</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://localhost/restaurant/pages/feedback.php">Feedback</a>
-            </li>
         </ul>
     </div>
     <div class="container">
         <hr>
         <div class="row">
-            <!-- Footer wird in Abschnitte (12tel) aufgeteilt um die Position Festzulegen -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <div class="col-md-6">
+                        <!-- einbinden der bestellanzeige -->
                         <a href="#" data-toggle="modal" data-target="#einkaufswagenModal">
                             <i class="fas fa-shopping-cart" id="warenkorb_icon"></i>
                         </a>
@@ -36,7 +33,7 @@
         </div>
     </div>
 </nav>
-
+<!-- bestellanzeige wird erstellt-->
 <div class="modal fade" id="einkaufswagenModal" tabindex="-1" role="dialog" aria-labelledby="einkaufswagenModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

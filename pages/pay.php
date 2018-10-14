@@ -42,13 +42,14 @@
 
         <?php endforeach; ?>
         <tr></tr>
-
+        <!-- aufsummieren der preise -->
         <tr>
             <td scope="row" colspan="2"> <br> <h6>Summe: </h6></td>
             <td> <br> <h6> <?php echo $betrag?> </h6></td>
         </tr>
 
         </tbody>
+        <!-- tischnummer übergeben -->
         Tischnummer: <?php echo $bills['Tischnummer'] ?>
 
 
@@ -58,7 +59,7 @@
     <div class="col-md-12"> Bitte wählen Sie ihre Zahlungsweise:
         <a href="https://www.paypal.com/de/signin" target="_blank" id="pp-link">
             <i class="fab fa-cc-paypal" id="pp_icon"></i>
-            <!-- Icon wird erstellt und benötigt eine ID um die Formatierung via CSS zu verändern-->
+
         </a>
         <a href="https://sumup.de" target="_blank" id="visa-link">
             <i class="fab fa-cc-visa" id="visa_icon"></i>
@@ -81,7 +82,6 @@
         </a>
 
     </div>
-</div>
 
 
 

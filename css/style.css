@@ -5,8 +5,20 @@
 body {
     margin: 0;
 }
+ /* schriftarten festlegen */
 
-/* kein Außenabstand*/
+p {
+    color: #444444;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Javanese Text";
+}
+
+p1  {
+    color: white;
+    font-size: 16px;
+    font-family: "calibri light";
+}
 
 h1 {
     display: block;
@@ -132,6 +144,7 @@ h12 {
     text-align: right;
 }
 
+/* css für klassen */
 
 .bg-section {
     background: rgba(0, 0, 0, .65);
@@ -159,26 +172,15 @@ h12 {
     font-weight: 400;
 }
 
-p {
-    color: #444444;
-    text-align: center;
-    font-size: 24px;
-    font-family: "Javanese Text";
-}
 
-p1  {
-    color: white;
-    font-size: 16px;
-    font-family: "calibri light";
-}
-
-/* Style the header */
+/* css für header */
 .header {
     background-color: #f1f1f1;
     padding: 20px;
     text-align: center;
 }
 
+/* css für icons */
 #user_icon {
     font-size: 24px;
     color: black;
@@ -241,6 +243,11 @@ p1  {
 .plusSpecial i.fas {
     color: black !important;
 }
+/* hover-funktionen */
+
+#euro_icon:hover {
+    cursor: pointer;
+}
 
 #pp-link:hover i {
     color: #009cde;
@@ -272,14 +279,22 @@ p1  {
     font-size: 30px;
 }
 
+.addCartBtn {
+    background: transparent;
+}
 
-/* Style the top navigation bar */
+.addCartBtn:hover i {
+    color: dimgrey !important;
+}
+
+
+/* navbar style */
 .topnav {
     overflow: hidden;
     background-color: #333;
 }
 
-/* Style the topnav links */
+/* navbarstyle links*/
 .topnav a {
     float: left;
     display: block;
@@ -289,29 +304,29 @@ p1  {
     text-decoration: none;
 }
 
-/* Change color on hover */
+/* farbwechsel bei hover */
 .topnav a:hover {
     background-color: #ddd;
     color: black;
 }
 
-/* Create three unequal columns that floats next to each other */
+/* tabellen-style */
 .column {
     float: left;
     padding: 10px;
 }
 
-/* Left and right column */
+/* rechts und links */
 .column.side {
     width: 25%;
 }
 
-/* Middle column */
+/* mitte */
 .column.middle {
     width: 50%;
 }
 
-/* Clear floats after the columns */
+/* tabellenabschluss */
 .row:after {
     content: "";
     display: table;
@@ -328,11 +343,8 @@ p1  {
     width: 100%;
 }
 
-/*.table tbody tr td:first-child {
-    font-style: italic;
+/* css für tabellen */
 
-}
-*/
 .table thead tr th:last-child {
     max-width: 75px;
     width: 10%;
@@ -353,7 +365,7 @@ p1  {
     width: 10%;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* aufteilung tabellen  */
 @media screen and (max-width: 600px) {
     .column.side, .column.middle {
         width: 100%;
@@ -366,7 +378,7 @@ p1  {
 
 }
 
-/* Style the footer */
+/* css für footer */
 .footer {
     background-color: #f1f1f1;
     padding: 10px;
@@ -374,13 +386,6 @@ p1  {
 
 }
 
-.addCartBtn {
-    background: transparent;
-}
-
-.addCartBtn:hover i {
-    color: dimgrey !important;
-}
 
 footer {
     padding-bottom: 30px;
@@ -410,7 +415,7 @@ footer #instagram-link:hover i{
     color: #e1306c;
 }
 
-
+/* css für pop-up / modal */
 .Meldung {
     position: fixed;
     right: 10px;
@@ -423,14 +428,6 @@ footer #instagram-link:hover i{
     -moz-border-radius: 10px;
     border-radius: 10px;
     padding: 8px 14px;
-}
-
-
-#curve{
-    position:relative;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
 }
 
 
@@ -453,14 +450,21 @@ footer #instagram-link:hover i{
     left: 50px;
 }
 
-#euro_icon:hover {
-    cursor: pointer;
-}
 
 footer a span{
     font-family: "calibri light";
     font-size: 16px;
     padding-left: 8px;
 }
+
+/* css für svg */
+
+#curve{
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+}
+
 
 

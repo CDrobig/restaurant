@@ -7,16 +7,22 @@ class DatabaseController
     {
         $this->conn();
     }
+
     public function conn()
-    {
+    {   /* eingabe von benutzerdaten für verbindungsaufbau*/
         $this->_link = new \mysqli("localhost", "thedish", "Ced55344", "restaurant");
-        /* check connection */
+        /* verbindung überprüfen*/
         if ($this->_link->connect_errno) {
             printf("Connect failed: %s\n", $this->_link->connect_error);
             exit();
         }
         mysqli_query($this->_link, 'set names utf8');
     }
+
+    /**
+     * datenbankzugriffe zur erstellung der speisekarten
+     * @return array
+     */
     public function showAlkoholfrei()
     {
         $query = "SELECT * FROM drinks WHERE kategorie='alkoholfrei';";
@@ -103,6 +109,12 @@ class DatabaseController
         return $parsed;
     }
 
+    /**
+     * abgleich der eingegebenen benutzerdaten
+     * @param String $user
+     * @param String $passwort
+     * @return array|bool
+     */
     public function compare_user_credentials(String $user, String $passwort)
     {
         $query = "SELECT * FROM user WHERE ID='" . $user . "' AND passwort='" . $passwort . "';";
@@ -128,6 +140,11 @@ class DatabaseController
         $bestellung = mysqli_insert_id($this->_link);
         return $bestellung;
     }
+
+    /**
+     * implementierung der daten aus der akutellen session und verknüpfung der posten-tabellen mit "bestellung" = inner join
+     * @return array
+     */
     public function showRechnung()
     {
         $tisch = $_SESSION['auth']['tischnummer'];
@@ -158,6 +175,10 @@ class DatabaseController
         }
         return $result;
     }
+
+    /**
+     * zugriff auf mehrere tabellen der datenbank
+     */
     public function show_bestellungen()
     {
         // SELECT b.ID as "ID", CONCAT(d.name,'', m.name) as "Name", CONCAT(d.price,'', m.price) as "Preis" FROM bestellung b LEFT JOIN drinks d on b.gericht_id = d.ID LEFT JOIN menu m ON b.gericht_id = m.ID
@@ -191,14 +212,16 @@ class DatabaseController
                     array_push($result[$nummer['tischnummer']], $element);
                 }
             }
-            /*
-            echo "<pre>";
-            print_r($result);
-            echo "</pre>";
-            */
+
         }
         return $result;
     }
+
+    /**
+     * daten aus den datenbanktabellen als array bereitstellen
+     * @param $data
+     * @return array
+     */
     private function get_as_array($data)
     {
         $array = array();

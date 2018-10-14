@@ -41,7 +41,7 @@ class AuthController
         }
     }
     /**
-     * User-Logout
+     * user-logout
      */
     static function logout()
     {

@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Service Login</title>
+<!-- anbindung bootstrap-bibliothek-->
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="login-css">
 
@@ -15,7 +16,7 @@
 <form action="login.php" method="POST">
 
     <?php
-
+    /* session variable "auth" überprüfen */
     if (isset($_SESSION['auth'])) {
         unset($_SESSION['auth']);
     }
@@ -27,6 +28,8 @@
         }
     }
     ?>
+
+<!-- layout login-fenster-->
 
     <div class="container">
         <div class="login-form">
@@ -65,6 +68,8 @@
 
 <?php
 
+ /*datenabgleich mit datenbank und sessionstart*/
+
 require_once "./controllers/DatabaseController.php";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -93,13 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         );
         header('Location: http://localhost/restaurant/');
         return true;
-        /*
-        for ($i = 0; $i < count($parsed); $i++) {
-            foreach ($parsed[$i] as $key => $value) {
-                echo $key . ' - ' . $value . '<br>';
-            }
-        }
-        */
+
     }
 
 }
